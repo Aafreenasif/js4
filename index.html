@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">All about LOOP</h1>
+
+<body>
+  <script>
+    document.write("<h2> Table using loop </h2>")
+    var Table = prompt("Enter any number")
+    for (var a = 1; a <= 10; a++) {
+      document.write("<p>", Table, "*", a, "=", (a * Table), "</p>")
+    }
+    //loop for cities
+    document.write("<h2> unordered list using loop </h2>")
+    var CitiesName = ["karachi", "lahore", "peshawar", "hyderabad", "multan", "islamabad"];
+    document.write("<ul>")
+    for (var a = 0; a < CitiesName.length; a++) {
+      document.write("<li>" + CitiesName[a] + "</li>")
+
+    }
+    document.write("</ul>")
+    // cleanest city check
+    var CleanestCity = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
+    var citytocheck = prompt("Enter any one city name (Cheyenne, Santa Fe, Tucson, Great Falls, Honolulu)")
+    var c = false
+    for (var a = 1; a < CleanestCity.length; a++) {
+      if (citytocheck === CleanestCity[1]) {
+        c = true
+        alert("It is one of the cleanest city")
+        break;
+
+      }
+      if (!c) {
+
+        alert("It is not one of the cleanest city")
+      }
+    }
+
+
+    // flags
+    var JapanCities = ["Tokyo", "Osaka", "Kyoto", "Kobe"];
+    var Capital = "Tokyo"
+    var UserInput = prompt("Enter the city name: (Tokyo,Osaka,Kyoto,Kobe)")
+    var match = false
+    for (var i = 0; i < JapanCities.length; i++) {
+      if (JapanCities[i] === UserInput) {
+        match = true
+        if (UserInput === Capital) {
+          alert(Capital + " is the capital of japan")
+        }
+
+        else {
+          match = true
+          alert(UserInput + " is the city in japan,but not the capital of japan")
+        }
+
+      }
+    }
+    if (!match) {
+      alert(UserInput + " is not a city in japan")
+    }
+
+    document.write("<h2> Student data using Multidimensional Array </h2>")
+    var Data = [
+      ["Name", "Gender", "Age", "Graduation"],
+      ["Jack", "Male", "25", "MBBS"],
+      ["Sarah", "Female", "21", "ACCA"],
+      ["Henry", "Male", "26", "CS"],
+      ["Olivia", "Female", "24", "B.COM"]
+    ];
+    document.write("<table border = '1px' colspacing ='5'> ")
+    for (var a = 0; a < Data.length; a++) {
+      document.write("<tr>")
+      for (var b = 0; b < 4; b++) {
+
+        if (a === 0) {
+          document.write("<th>" + Data[a][b] + "</th>")
+        }
+        else {
+
+          document.write("<td>" + Data[a][b], " " + "</td>")
+        }
+
+      }
+      document.write("</tr>")
+      document.write("<br>")
+    }
+    document.write("</table>")
+
+
+  </script>
+</body>
+
+</html>
